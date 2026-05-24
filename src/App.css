@@ -159,6 +159,8 @@ a {
 
 .hero__content {
   width: min(980px, 100%);
+  min-width: 0;
+  padding-top: 34px;
 }
 
 .eyebrow {
@@ -184,6 +186,7 @@ h1 {
   font-size: clamp(3.5rem, 8.5vw, 7.4rem);
   line-height: 0.92;
   font-weight: 800;
+  overflow-wrap: break-word;
 }
 
 h2 {
@@ -216,6 +219,8 @@ p {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  box-sizing: border-box;
+  max-width: 100%;
   min-height: 50px;
   padding: 14px 20px;
   border-radius: 8px;
@@ -225,6 +230,10 @@ p {
 
 .button:hover {
   transform: translateY(-2px);
+}
+
+.button svg {
+  flex: 0 0 auto;
 }
 
 .button--primary {
@@ -506,17 +515,24 @@ p {
   }
 
   h1 {
-    font-size: clamp(3.15rem, 15vw, 4.6rem);
+    font-size: clamp(2.9rem, 13vw, 3.85rem);
+    line-height: 1.02;
   }
 
   .hero__subheading {
     margin-top: 22px;
   }
 
+  .hero__content {
+    padding-top: 10px;
+  }
+
   .button {
     width: 100%;
     min-height: 54px;
     padding-inline: 16px;
+    white-space: normal;
+    text-align: center;
   }
 
   .section-heading,
